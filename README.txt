@@ -10,16 +10,16 @@
 
 ### 1. WhatsApp
 Em todos os arquivos HTML, procure:
-5511999999999
+5511912583413
 
 Troque pelo seu número no formato:
 55 + DDD + número
 Exemplo:
-5511987654321
+5511912583413
 
 ### 2. Checkout real
 Abra checkout.html e procure:
-https://SEU-LINK-DE-PAGAMENTO-AQUI.com
+https://mpago.la/1PtfX8Z
 
 Troque pelo link do checkout gerado pela sua plataforma de pagamento.
 
