@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inglês do Básico ao Avançado | Ebook</title>
+<style>
+:root{
+  --primary:#2563eb;
+  --primary-dark:#1d4ed8;
+  --accent:#f59e0b;
+  --dark:#0f172a;
+  --text:#334155;
+  --light:#f8fafc;
+  --white:#ffffff;
+  --success:#16a34a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--light);
+  line-height:1.6;
+}
+.container{width:min(1120px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #e2e8f0;
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.logo{font-weight:800;font-size:1.2rem;color:var(--dark)}
+.logo span{color:var(--primary)}
+.nav a{text-decoration:none;color:var(--text);font-weight:700}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:15px 24px;border-radius:10px;text-decoration:none;
+  font-weight:800;border:none;cursor:pointer;transition:.2s;
+}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 25px rgba(37,99,235,.22)}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.btn-outline{border:2px solid var(--primary);color:var(--primary);background:#fff}
+.hero{padding:70px 0 50px;background:linear-gradient(135deg,#eff6ff 0%,#fff 60%,#fef3c7 100%)}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center
+}
+.badge{
+  display:inline-block;background:#dbeafe;color:#1d4ed8;
+  font-weight:800;padding:8px 13px;border-radius:999px;margin-bottom:18px
+}
+h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.05;color:var(--dark);margin-bottom:20px}
+.hero p{font-size:1.15rem;max-width:650px;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+.mini-proof{display:flex;gap:20px;flex-wrap:wrap;font-size:.95rem;font-weight:700}
+.mini-proof span{display:flex;align-items:center;gap:7px}
+.cover{
+  width:min(100%,370px);aspect-ratio:3/4;margin:auto;
+  border-radius:18px;padding:34px;
+  color:#fff;background:linear-gradient(160deg,#1d4ed8,#2563eb 55%,#0f172a);
+  box-shadow:22px 25px 0 #dbeafe,0 28px 50px rgba(15,23,42,.25);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.cover .small{font-size:.85rem;letter-spacing:1.5px;font-weight:700}
+.cover h2{font-size:2.6rem;line-height:1.05}
+.cover .level{font-size:1.05rem;font-weight:700;color:#bfdbfe}
+section{padding:78px 0}
+.section-title{text-align:center;max-width:750px;margin:0 auto 42px}
+.section-title h2{font-size:2.25rem;color:var(--dark);margin-bottom:10px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:#fff;border:1px solid #e2e8f0;border-radius:16px;
+  padding:26px;box-shadow:0 8px 25px rgba(15,23,42,.05)
+}
+.icon{font-size:2rem;margin-bottom:12px}
+.card h3{color:var(--dark);margin-bottom:8px}
+.learn{background:#fff}
+.learn-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.learn-item{
+  background:#f8fafc;border-left:5px solid var(--primary);
+  padding:18px;border-radius:8px
+}
+.learn-item strong{color:var(--dark);display:block}
+.offer{background:var(--dark);color:#fff}
+.offer .section-title h2,.offer .section-title p{color:#fff}
+.price-box{
+  background:#fff;color:var(--text);max-width:620px;margin:auto;
+  border-radius:22px;padding:34px;text-align:center;
+  box-shadow:0 25px 70px rgba(0,0,0,.25)
+}
+.old-price{text-decoration:line-through;color:#64748b}
+.price{font-size:3.6rem;font-weight:900;color:var(--primary);line-height:1.1;margin:8px 0}
+.price small{font-size:1.2rem}
+.features{list-style:none;text-align:left;margin:25px auto;max-width:430px}
+.features li{padding:9px 0;border-bottom:1px solid #e2e8f0}
+.features li:before{content:"✓";color:var(--success);font-weight:900;margin-right:10px}
+.guarantee{
+  margin-top:18px;font-size:.9rem;color:#475569
+}
+.faq{max-width:800px;margin:auto}
+.faq details{
+  background:#fff;border:1px solid #e2e8f0;border-radius:10px;
+  padding:17px 20px;margin-bottom:12px
+}
+.faq summary{cursor:pointer;font-weight:800;color:var(--dark)}
+.faq p{padding-top:12px}
+footer{background:#020617;color:#94a3b8;padding:34px 0;text-align:center;font-size:.92rem}
+@media(max-width:800px){
+  .nav>a{display:none}
+  .hero-grid,.grid-3,.learn-list{grid-template-columns:1fr}
+  .hero{text-align:center}
+  .hero-actions{justify-content:center}
+  .mini-proof{justify-content:center}
+  .cover{margin-top:15px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">INGLÊS <span>FLUENTE</span></div>
+    <a href="#conteudo">O que você aprende</a>
+    <a href="#oferta" class="btn btn-primary">Quero meu ebook</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">📘 Ebook completo + aprendizado passo a passo</div>
+      <h1>Aprenda inglês do básico ao avançado.</h1>
+      <p>Um guia prático, organizado e fácil de acompanhar para você construir seu inglês com confiança — mesmo começando do zero.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#oferta">Quero aprender inglês agora</a>
+        <a class="btn btn-outline" href="#conteudo">Ver o conteúdo</a>
+      </div>
+      <div class="mini-proof">
+        <span>✓ Do básico ao avançado</span>
+        <span>✓ Exercícios práticos</span>
+        <span>✓ Plano de 12 semanas</span>
+      </div>
+    </div>
+    <div class="cover">
+      <div class="small">EBOOK COMPLETO</div>
+      <div>
+        <h2>INGLÊS<br>DO BÁSICO<br>AO AVANÇADO</h2>
+        <div class="level">Aprenda • Pratique • Evolua</div>
+      </div>
+      <div class="small">GUIA PRÁTICO DE ESTUDOS</div>
+    </div>
+  </div>
+</section>
+
+<section id="conteudo" class="learn">
+  <div class="container">
+    <div class="section-title">
+      <h2>Um caminho claro para aprender inglês</h2>
+      <p>Você não precisa estudar tudo de uma vez. O ebook foi estruturado para evoluir passo a passo.</p>
+    </div>
+    <div class="learn-list">
+      <div class="learn-item"><strong>🇬🇧 Fundamentos</strong>Alfabeto, pronúncia, cumprimentos, pronomes e verbo to be.</div>
+      <div class="learn-item"><strong>📚 Inglês básico</strong>Artigos, plural, possessivos, Present Simple e perguntas.</div>
+      <div class="learn-item"><strong>🗣️ Construção de frases</strong>Present Continuous, adjetivos, preposições e expressões úteis.</div>
+      <div class="learn-item"><strong>⏳ Passado e futuro</strong>Simple Past, Past Continuous, will, going to e verbos modais.</div>
+      <div class="learn-item"><strong>🚀 Nível intermediário</strong>Present Perfect, comparativos, conditionals e frases mais completas.</div>
+      <div class="learn-item"><strong>🎯 Nível avançado</strong>Passive Voice, Reported Speech, Phrasal Verbs e conectores.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Por que este ebook é diferente?</h2>
+      <p>Conteúdo pensado para facilitar a compreensão e transformar conhecimento em prática.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="icon">🧠</div><h3>Explicação simples</h3><p>Gramática explicada em linguagem clara, com exemplos fáceis de entender.</p></div>
+      <div class="card"><div class="icon">✍️</div><h3>Prática constante</h3><p>Exercícios e práticas rápidas para usar o conteúdo imediatamente.</p></div>
+      <div class="card"><div class="icon">📅</div><h3>Plano de estudos</h3><p>Um roteiro de 12 semanas para ajudar você a manter consistência.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="oferta">
+  <div class="container">
+    <div class="section-title">
+      <h2>Comece sua jornada no inglês hoje</h2>
+      <p>Tenha o ebook completo e estude no seu ritmo.</p>
+    </div>
+    <div class="price-box">
+      <h3>INGLÊS DO BÁSICO AO AVANÇADO</h3>
+      <p class="old-price">De R$ 97,00</p>
+      <div class="price"><small>R$</small> 29,90</div>
+      <p>Pagamento único • Acesso ao ebook em PDF</p>
+      <ul class="features">
+        <li>Conteúdo do básico ao avançado</li>
+        <li>30 capítulos organizados</li>
+        <li>Exercícios e exemplos</li>
+        <li>Plano de estudos de 12 semanas</li>
+        <li>Avaliação final</li>
+      </ul>
+      <!-- TROQUE O LINK ABAIXO PELO SEU LINK DE CHECKOUT -->
+      <a class="btn btn-primary" style="width:100%" href="https://SEU-LINK-DE-PAGAMENTO-AQUI.com" target="_blank">COMPRAR AGORA</a>
+      <p class="guarantee">🔒 Pagamento seguro. Após configurar seu checkout, o cliente poderá ser direcionado para a compra.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details><summary>O ebook é indicado para iniciantes?</summary><p>Sim. O conteúdo começa pelos fundamentos e avança gradualmente para tópicos intermediários e avançados.</p></details>
+      <details><summary>Como recebo o ebook?</summary><p>Você pode configurar sua plataforma de pagamento para liberar automaticamente o PDF após a confirmação do pagamento.</p></details>
+      <details><summary>Posso estudar no celular?</summary><p>Sim. O ebook em PDF pode ser lido no celular, tablet ou computador.</p></details>
+      <details><summary>Quanto tempo devo estudar?</summary><p>A recomendação do ebook é estudar cerca de 30 a 45 minutos por dia, mantendo uma rotina consistente.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>INGLÊS FLUENTE</strong><br>
+    Ebook digital para aprendizado de inglês.<br><br>
+    © 2026 — Todos os direitos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
